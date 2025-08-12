@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do list</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+      @media (max-width: 1200px) {
+body {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+}
+      @media (max-width: 750px) {
+        body {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+      @media (max-width: 500px) {
+        body {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px auto;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+position: relative;
+        /* display: block; */
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        /* position: absolute;
+    top: 81px;
+    right: 236px; */
+    /* margin-left: 30px; */
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      #list, #completed-tasks {
+        margin-top: 20px;
+      }
+      .task {
+        background-color: #fff;
+        padding: 15px 40px;
+        margin: 10px auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+position: relative;
+      }
+      .task input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.5);
+      }
+      .task input:checked {
+position: absolute;
+left: 15px;
+        top: 15px;
+      }
+
+
+      .task:hover {
+        background-color: #ddd;
+      }
+      .done {
+        background-color: #28a745;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .delete {
+        background-color: #dc3545;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .done:hover {
+        background-color: #218838;
+      }
+      .delete:hover {
+        background-color: #c82333;
+      }
+      #completed-tasks h2, #list h2 {
+        text-align: center;
+        color: #555;
+      }
+/*       
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.toggle-checkbox {
+    background-color: #aaa;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-checkbox::before {
+content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    top: 0px;
+    left: -30px;
+    border: 2px solid gray;
+    transition: 0.3s;
+}
+
+.toggle-checkbox::after
+{font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 14px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 0;
+    background-color: #28a745;
+    color: white;
+    transform: scale(0) rotate(360deg);}
+ .toggle-checkbox:checked {
+       background-color: #28a745;
+}
+
+.toggle-checkbox:checked::before {
+    content: "\f00c";
+    left: 45px;
+    color:  #28a745;
+} */ 
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>To Do List</h1>
+      <div style="text-align: center;">
+      <input type="text" id="todo-input" placeholder="Add a new task" />
+      <button id="submit">Add</button>
+      </div>
+    </div>
+    <div id="list">
+      <h2>Incomplete Tasks</h2>
+    </div>
+    <div id="completed-tasks" >
+      <h2>Completed Tasks</h2>
+    </div>
+    <script src="main.js"></script>
+  </body>
+  
+</html>
